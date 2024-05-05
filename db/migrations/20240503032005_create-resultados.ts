@@ -2,8 +2,8 @@ import type { Knex } from 'knex';
 
 export async function up(knex: Knex): Promise<void> {
   await knex.schema.createTable('Resultados', table => {
-    table.uuid('resultado_id').primary();
-    table.uuid('jogo_id').references('jogo_id').inTable('Jogos');
+    table.increments('resultado_id').primary();
+    table.integer('jogo_id').references('jogo_id').inTable('Jogos');
     table.timestamp('data_hora_sorteio').notNullable().defaultTo(knex.fn.now());
     table.integer('dezena1_resultado').unsigned();
     table.integer('dezena2_resultado').unsigned();

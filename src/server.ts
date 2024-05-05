@@ -1,13 +1,12 @@
 import fastify from 'fastify';
 import { knex } from './database';
-import crypto from 'node:crypto';
 
 const app = fastify();
 
 app.get('/hello', async () => {
   const Jogos = await knex('Jogos')
     .insert({
-      jogo_id: crypto.randomUUID(),
+  
       data_hora_jogo: knex.fn.now(),
       tipo_jogo: 'quina test'
     })
