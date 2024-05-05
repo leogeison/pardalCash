@@ -1,23 +1,18 @@
 import fastify from 'fastify';
 import { knex } from './database';
+import { env } from './env';
 
 const app = fastify();
 
 app.get('/hello', async () => {
-  const Jogos = await knex('Jogos')
-    .insert({
-  
-      data_hora_jogo: knex.fn.now(),
-      tipo_jogo: 'quina test'
-    })
-    .returning('*');
+  const Jogos = await knex('Jogos').select('*').returning('*');
 
   return Jogos;
 });
 
 app
   .listen({
-    port: 3333
+    port: env.PORT
   })
   .then(() => {
     console.log('HTTP Server Running!');
