@@ -1,13 +1,11 @@
 import fastify from 'fastify';
-import { knex } from './database';
 import { env } from './env';
+import { jogosRoutes } from './routes/jogos';
 
 const app = fastify();
 
-app.get('/hello', async () => {
-  const Jogos = await knex('Jogos').select('*').returning('*');
-
-  return Jogos;
+app.register(jogosRoutes,{
+  prefix: 'jogos',
 });
 
 app
