@@ -29,6 +29,8 @@ export async function jogosRoutes(app: FastifyInstance) {
     await knex('Jogos').insert({
       tipo_jogo
     });
-    return reply.status(201).send();
+    return reply.status(201).send({
+      message: 'Jogo criado com sucesso'
+    });
   });
 }
