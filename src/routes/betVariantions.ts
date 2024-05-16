@@ -11,7 +11,7 @@ export async function betVariationsRoutes(app: FastifyInstance) {
       number3: z.number().min(0).max(99),
       number4: z.number().min(0).max(99),
       number5: z.number().min(0).max(99),
-      ticket_id: z.number().min(1).optional() // ID do bilhete ao qual a aposta está associada (opcional)
+      ticket_id: z.number().min(1).optional() // ID do bilhete ao qual a aposta está associada (opcional)- deixei opcional só pra fazer o teste no insommia pois nao criei rota bilhete
     });
 
     const { game_id, number1, number2, number3, number4, number5, ticket_id } =

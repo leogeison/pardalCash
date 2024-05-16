@@ -8,13 +8,17 @@ export async function gamesRoutes(app: FastifyInstance) {
     return { games };
   });
 
-  app.get('/:id', async request => {
+  app.get('/:id', async (request,reply) => {
     const getGamesParamsSchema = z.object({
       id: z.string()
     });
 
     const { id } = getGamesParamsSchema.parse(request.params);
     const game = await knex('Games').where('game_id', id).first();
+
+    if (!game) {
+      return reply.code(404).send({ message: 'Jogo não encontrado' });
+    }
 
     return { game };
   });

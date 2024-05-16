@@ -8,15 +8,15 @@ Fazer planejamento de estruturas informacionais para comportar dados oriundos de
 
 [x] 1. Armazenar todas as variações de jogos possíveis;
 
-[x] 2. Armazenar informações a cerca do bilhete de apostas;
+[] 2. Armazenar informações a cerca do bilhete de apostas;
 
-[x] 3. Armazenar dados do jogador
+[] 3. Armazenar dados do jogador
 
-[x] 4. Armazenar dados dos resultados dos jogos premiados
+[] 4. Armazenar dados dos resultados dos jogos premiados
 
-[x] 5. Armazenar dados dos pagamentos
+[] 5. Armazenar dados dos pagamentos
 
-[x] 6. Armazenar tokens de autorização de acesso
+[] 6. Armazenar tokens de autorização de acesso
 
 ## Regras de Negócio
 
@@ -28,15 +28,15 @@ Fazer planejamento de estruturas informacionais para comportar dados oriundos de
 
 [x] 4. As combinações de jogos não podem ser repetidas
 
-[x] 5. Todo bilhete deve estar vinculado a 22 jogos.
+[] 5. Todo bilhete deve estar vinculado a 22 jogos.
 
-[x] 6. Cada o bilhete só pode estar vinculado a um jogador
+[] 6. Cada o bilhete só pode estar vinculado a um jogador
 
-[x] 7. Uma pessoa pode estar vinculada a N bilhetes
+[] 7. Uma pessoa pode estar vinculada a N bilhetes
 
-[x] 8. Todo bilhete deve ter vínculo com um pagamento
+[] 8. Todo bilhete deve ter vínculo com um pagamento
 
-[x] 9. Todo jogador deve ser maior de 17 anos
+[] 9. Todo jogador deve ser maior de 17 anos
 
 ------------------------------- // -----------------------------
 
