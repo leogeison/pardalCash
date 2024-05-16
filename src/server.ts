@@ -1,15 +1,15 @@
 import fastify from 'fastify';
 import { env } from './env';
-import { jogosRoutes } from './routes/jogos';
-import { variacoesApostasRoutes } from './routes/variacoesApostas';
+import { gamesRoutes } from './routes/games';
+import { betVariationsRoutes } from './routes/betVariantions';
 
 const app = fastify();
 
-app.register(jogosRoutes,{
-  prefix: 'jogos',
+app.register(gamesRoutes,{
+  prefix: 'games',
 });
-app.register(variacoesApostasRoutes,{
-  prefix: 'variacoesApostas',
+app.register(betVariationsRoutes,{
+  prefix: 'betVariations',
 });
 
 app
@@ -17,5 +17,5 @@ app
     port: env.PORT
   })
   .then(() => {
-    console.log('HTTP Server Running!');
+    console.log('Servidor HTTP em execução!');
   });
